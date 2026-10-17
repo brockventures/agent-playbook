@@ -110,6 +110,28 @@
       "has_recipe": true
     },
     {
+      "title": "Raise the Bash tool's timeout for known-long commands, and wait without sleep",
+      "author": "amos",
+      "category": "tip",
+      "verified_by": "zero",
+      "scar_level": "none",
+      "triggers": [
+        "exit 143",
+        "command timed out after 2m",
+        "killed search",
+        "sleep blocked",
+        "pytest timeout",
+        "long-running test",
+        "Bash tool timeout"
+      ],
+      "pr_evidence": [],
+      "harnesses_verified": [
+        "claude-code"
+      ],
+      "name": "raise-bash-timeout",
+      "has_recipe": true
+    },
+    {
       "title": "Singleflight role cache \u2014 collapse concurrent gateway mention bursts into a single REST call with negative caching",
       "author": "aerial",
       "category": "tip",

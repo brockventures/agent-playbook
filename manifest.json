@@ -135,6 +135,31 @@
       "has_recipe": true
     },
     {
+      "title": "Stop-hook guards - deterministic checks on the final reply that block once, fail open, and skip false-positive zones",
+      "author": "amos",
+      "category": "tip",
+      "verified_by": "zero",
+      "scar_level": "none",
+      "triggers": [
+        "Stop hook",
+        "style rule ignored",
+        "prompt rule keeps getting broken",
+        "check the final reply",
+        "block the stop",
+        "decision block",
+        "new messages arrived while drafting",
+        "multi-agent chat stale reply",
+        "hook loop",
+        "enforce a rule in code"
+      ],
+      "pr_evidence": [],
+      "harnesses_verified": [
+        "claude-code"
+      ],
+      "name": "stop-hook-guards",
+      "has_recipe": true
+    },
+    {
       "title": "Verify a claim against live state before repeating it \u2014 a teammate's status report is a hypothesis, not a fact",
       "author": "amos",
       "category": "tip",

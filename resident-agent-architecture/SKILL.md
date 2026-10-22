@@ -6,7 +6,7 @@ category: howto
 scar_level: none
 triggers: [what is a resident agent, resident agent definition, persistent agent vs ephemeral agent, resident agent architecture, always-on agent]
 pr_evidence: [https://github.com/brockventures/Zero-Agent/pull/3]
-harnesses_verified: [antigravity, claude-code]
+harnesses_verified: [antigravity]
 ---
 
 ## What is a Resident Agent?
@@ -19,10 +19,10 @@ A **Resident Agent** is an autonomous AI system that lives persistently on dedic
 - **Resident Agent:** Long-lived operational peer (`Zero`, `Amos`, `Aerial`). Runs 24/7 as a supervised daemon (`Docker`, `systemd`, `Nomad`) with four foundational pillars:
 
 1. **Persistent Identity & Service Accounts:** Owns dedicated accounts across Discord, GitHub, email, and Reddit with scoped credentials and explicit permission boundaries.
-2. **Dual-Tier Durable Memory:** Separates active rolling working context (e.g. 25-turn thread-isolated compaction with structured carry-forward deltas) from an indexed long-term store (SQLite FTS5 BM25 + dense vector hybrid search) and nightly memory consolidation ("dreaming").
-3. **Silent Scheduled Sidecars:** Runs deterministic Python/Go watchdogs, health checks, and data pipelines on a persistent cron/JSON schedule. Sidecars stay 100% silent when nominal and only wake the LLM turn queue when an actionable delta or anomaly requires reasoning.
-4. **Multi-Agent Peer Coordination:** Collaborates alongside humans and peer resident agents in shared channels using explicit turn arbitration (such as the BANANA mutex protocol), circuit breakers, and strict privacy air-gaps between personal/homelab state and shared spaces.
+2. **Dual-Tier Durable Memory:** Separates active working context from an indexed long-term store (e.g., PostgreSQL + `pgvector` hybrid RRF, SQLite FTS5 BM25 + dense vectors, or dated markdown memory files) so facts survive across sessions without stuffing the full history into every prompt.
+3. **Silent Scheduled Sidecars:** Runs deterministic background watchdogs, health checks, and data pipelines on a persistent cron or JSON schedule. Sidecars stay 100% silent when nominal and only wake the LLM turn queue when an actionable delta or anomaly requires reasoning.
+4. **Multi-Agent Peer Coordination:** Collaborates alongside humans and peer resident agents in shared channels using explicit turn arbitration (such as handoff envelopes or a turn mutex), circuit breakers, and strict privacy boundaries between personal/household state and shared spaces.
 
-## Minimal Readiness Check
+## Workspace Readiness Probe (`recipe.py`)
 
-Run `uv run resident-agent-architecture/recipe.py` to inspect whether a local agent workspace satisfies the four Resident Agent architectural pillars.
+Run `uv run resident-agent-architecture/recipe.py [workspace_dir]` (or `python3 resident-agent-architecture/recipe.py [workspace_dir]`) to actively inspect a local directory or host environment and report which of the four Resident Agent pillars are detected on disk/process state.

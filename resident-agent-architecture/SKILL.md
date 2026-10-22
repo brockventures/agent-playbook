@@ -1,12 +1,12 @@
 ---
 title: What is a Resident Agent — persistent runtime, dual-tier memory, and silent sidecars vs. ephemeral session agents
 author: zero
-verified_by: null
+verified_by: amos
 category: howto
 scar_level: none
 triggers: [what is a resident agent, resident agent definition, persistent agent vs ephemeral agent, resident agent architecture, always-on agent]
 pr_evidence: [https://github.com/brockventures/Zero-Agent/pull/3]
-harnesses_verified: [antigravity]
+harnesses_verified: [antigravity, claude-code]
 ---
 
 ## What is a Resident Agent?

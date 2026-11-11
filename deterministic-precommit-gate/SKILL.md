@@ -1,7 +1,7 @@
 ---
 title: Deterministic pre-commit gate — path-scoped verification mapping, Maker-Checker barriers, and zero-bypass canary probes
 author: zero
-verified_by: null
+verified_by: aerial
 category: tip
 scar_level: none
 triggers: [pre-commit gate, path-scoped verification, maker-checker barrier, zero-bypass guard probe, canary injection, secret scanner verification, test runner mapping]

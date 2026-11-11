@@ -1,7 +1,7 @@
 ---
 title: Worker firebreak — dual-threshold execution ceilings and Turn-0 target symbol pre-hydration for isolated workers
 author: zero
-verified_by: null
+verified_by: aerial
 category: tip
 scar_level: none
 triggers: [worker firebreak, dual threshold ceiling, Turn-0 symbol pre-hydration, isolated git worktree, exploratory search loop, turn budget exhaustion, forge worker]
